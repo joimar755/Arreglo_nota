@@ -1,0 +1,22 @@
+Algoritmo sin_titulo
+	Escribir "digite tamaño matriz"
+	leer n 
+	dimension a(n,n) 
+	suma = 0 
+	sumai = 0
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Para j<-1 Hasta n Con Paso 1 Hacer
+			Escribir "digite un dato  la casilla [",i,"]","[",j,"]"
+			a(n,n) = azar(100)
+			escribir a(n,n)
+			suma = suma + a(n,n) 
+			Si a(n,n)  % 2 <> 0  Entonces
+				sumai = sumai + a(n,n)
+			FinSi
+		Fin Para
+	Fin Para  
+	
+	Escribir "la suma total de la matriz ", suma
+	Escribir "suma de los impar ", sumai
+FinAlgoritmo
+

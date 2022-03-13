@@ -17,7 +17,9 @@ public class Principal {
             System.out.println("[4] Ordenar insercion");
             System.out.println("[5] Ordenar shell");
             System.out.println("[6] Ordenar quicksort");
-            System.out.println("[7] Salir");
+            System.out.println("[7] busqueda binaria");
+            System.out.println("[8] Ordenar seleccion");
+            System.out.println("[9] Salir");
             System.out.println("\n\n\t\tIngrese una opcion: ");
             Opcion = teclado.nextInt();
 
@@ -41,13 +43,19 @@ public class Principal {
                     Obj.Ordenar_quicksort();
                     break;
                 case 7:
+                    Obj.busqueda_binaria();
+                    break;
+                case 8:
+                    Obj.busqueda_secuencial();
+                    break;
+                case 9:
                     System.out.println("\n\n\t\tFin del programa");
                     break;
 
                 default:
                     break;
             }
-        } while (Opcion != 7);
+        } while (Opcion != 9);
 
     }
 }

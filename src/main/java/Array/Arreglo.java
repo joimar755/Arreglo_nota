@@ -2,10 +2,16 @@ package Array;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Arreglo {
     int[] n = new int[6];
     int[] m = new int[4];
     int[] c = new int[10];
+    int pos;
+    int salto;
+    int j;
+    int k;
 
     public void Cargar_array() {
         Scanner teclado = new Scanner(System.in);
@@ -34,7 +40,7 @@ public class Arreglo {
         for (int i = 0; i < c.length - 1; i++) {
             for (int j = 0; j < c.length - 1; j++) {
                 if (c[j] > c[j + 1]) {
-                    aux = c[j];
+                    aux = c[j]; // intercambiar
                     c[j] = c[j + 1];
                     c[j + 1] = aux;
                 }
@@ -75,16 +81,149 @@ public class Arreglo {
 
     // ordenamiento insercion
     public void Ordenar_insercion() {
+        int aux;
+        for (int i = 0; i < c.length; i++) {
+            pos = i;
+            aux = c[i]; // numero actual
+            while ((pos > 0) && (c[pos - 1] > aux)) {
+                c[pos] = c[pos - 1];
+                pos--;
+            }
+            c[pos] = aux; // refrescar el numero
+        }
+        System.out.println("\n\n\t\tOrdenamiento Insercion creciente: ");
+        for (int i = 0; i < c.length; i++) {
+            System.out.println(" - " + c[i]); // imprimir arreglo
+        }
+        System.out.println("\n\n\t\tOrdenamiento Insercion decreciente: ");
+        for (int i = c.length - 1; i >= 0; i--) {
+            System.out.println(" - " + c[i]); // imprimir arreglo
+        }
 
     }
 
     // ordenamiento shell
     public void Ordenar_shell() {
 
+        salto = c.length / 2;
+        while (salto > 0) {
+            for (int i = salto; i < c.length; i++) {
+                j = i - salto;
+                while (j >= 0) {
+                    k = j + salto;
+                    if (c[j] < c[k]) {
+                        j = -1;
+
+                    } else {
+                        int aux = c[j];
+                        c[j] = c[k];
+                        c[k] = aux;
+                        j -= salto;
+                    }
+
+                }
+            }
+            salto = salto / 2;
+        }
+        System.out.println("\n\n\t\tOrdenamiento Shell creciente: ");
+        for (int i = 0; i < c.length; i++) {
+            System.out.println(" - " + c[i]); // imprimir arreglo
+        }
+
+    }
+
+    public void quick(int[] arreglo, int primero, int ultimo) {
+        int i = primero;
+        int j = ultimo;
+        int aux;
+        int pivote = arreglo[(primero + ultimo) / 2];
+        do {
+            while (arreglo[i] < pivote) {
+                i++;
+            }
+            while (arreglo[j] > pivote) {
+                j--;
+            }
+            if (i <= j) {
+                aux = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = aux;
+                i++;
+                j--;
+            }
+        } while (i <= j);
+        if (primero < j) {
+            quick(arreglo, primero, j);
+        }
+        if (i < ultimo) {
+            quick(arreglo, i, ultimo);
+        }
+        Ordenar_quicksort();
+
     }
 
     // ordenamiento quicksort
+
     public void Ordenar_quicksort() {
+        System.out.println("\n\n\t\tOrdenamiento Quicksort creciente: ");
+        for (int i = 0; i < c.length; i++) {
+            System.out.println(" - " + c[i]); // imprimir arreglo
+        }
+
+    }
+
+    public void busqueda_binaria() {
+        int dato, inf, sup, mitad, i;
+        boolean band = false;
+        System.out.println("\n\n\t\tBusqueda Binaria");
+
+        dato = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero a buscar"));
+        inf = 0; // limite inferior
+        sup = c.length; // limite superior
+        i = 0; // contador
+        mitad = (inf + sup) / 2;
+        while (inf <= sup && i < c.length) {
+            if (c[mitad] == dato) {
+                band = true;
+                break;
+            }
+            if (c[mitad] > dato) {
+                sup = mitad;
+                mitad = (inf + sup) / 2;
+            }
+            if (c[mitad] < dato) {
+                inf = mitad;
+                mitad = (inf + sup) / 2;
+            }
+            i++;
+
+        }
+        if (band == true) {
+            System.out.println("\n\n\t\tEl numero " + dato + " se encuentra en la posicion " + mitad);
+        } else {
+            System.out.println("\n\n\t\tEl numero " + dato + " no se encuentra en el arreglo");
+        }
+    }
+
+    public void busqueda_secuencial() {
+        int dato, i;
+        boolean band = false;
+        System.out.println("\n\n\t\tBusqueda Secuencial");
+        System.out.println("\n\n\t\tIngrese el numero a buscar: ");
+        dato = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero a buscar"));
+        i = 0;
+        while (i < c.length) {
+            if (c[i] == dato) {
+                band = true;
+                break;
+            }
+            i++;
+        }
+        if (band == true) {
+            System.out.println("\n\n\t\tEl numero " + dato + " se encuentra en la posicion " + i);
+        } else {
+            System.out.println("\n\n\t\tEl numero " + dato + " no se encuentra en el arreglo");
+        }
 
     }
 

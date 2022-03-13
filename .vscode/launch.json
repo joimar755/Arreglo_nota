@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Triki_principal",
+            "request": "launch",
+            "mainClass": "Tricki.Triki_principal",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch triqui",
+            "request": "launch",
+            "mainClass": "Tricki.triqui",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Pseint",
             "request": "launch",
             "mainClass": "Array.Pseint",

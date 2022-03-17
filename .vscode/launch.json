@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Princ",
+            "request": "launch",
+            "mainClass": "Parcial_practico.Princ",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Peaje",
+            "request": "launch",
+            "mainClass": "Parcial_practico.Peaje",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio3",
+            "request": "launch",
+            "mainClass": "Practica_vectores.Ejercicio3",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Componentes",
+            "request": "launch",
+            "mainClass": "Practica_vectores.Componentes",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch sin_titulo",
+            "request": "launch",
+            "mainClass": "Practica_vectores.sin_titulo",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio2",
+            "request": "launch",
+            "mainClass": "Practica_vectores.Ejercicio2",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1",
+            "request": "launch",
+            "mainClass": "Practica_vectores.Ejercicio1",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Triki_principal",
             "request": "launch",
             "mainClass": "Tricki.Triki_principal",

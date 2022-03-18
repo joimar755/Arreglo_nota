@@ -16,7 +16,7 @@ public class Princ {
             System.out.println("[4] camion_grande");
             System.out.println("[5] mula");
             System.out.println("[6] reporte_estadistico");
-            System.out.println("[6] salir");
+            System.out.println("[7] salir");
             System.out.println("\n\n\t\tIngrese una opcion: ");
             opcion = sc.nextInt();
 

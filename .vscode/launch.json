@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "Matriz_Ejercicios.App",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matriz",
+            "request": "launch",
+            "mainClass": "Matriz_Ejercicios.Matriz",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matriz",
+            "request": "launch",
+            "mainClass": "Array.Matriz",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch matriz",
+            "request": "launch",
+            "mainClass": "Array.matriz",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch matriz",
+            "request": "launch",
+            "mainClass": "matriz",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Princ",
             "request": "launch",
             "mainClass": "Parcial_practico.Princ",

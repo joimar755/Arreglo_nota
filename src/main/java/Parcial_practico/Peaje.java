@@ -32,11 +32,11 @@ public class Peaje {
 
             System.out.println("nombre: " + Vehiculos[0]);
 
-            Cantvh[i] = n;
-            cantidad_vh += Cantvh[i];
+            Cantvh[i] = n; // guardar cantidad vehiculos
+            cantidad_vh += Cantvh[i]; // sumar automaticamente la cantidad de vehiculos
             porcentaje = (cantidad_vh * 100) / n;
-            a = n * peajes[0];
-            total += a;
+            a = n * peajes[0]; // multiplicar el recaudo
+            total += a;// sumar automatica los peajes de cuantas veces tenga el numero n
             System.out.println("Recaudo " + a);
 
         }
@@ -157,7 +157,7 @@ public class Peaje {
         System.out.println("porcentaje: " + porcentaje);
         System.out.println("Recaudo_total: " + total);
         System.out.println("vehículos que mas pasó por el peaje: " + veh_mayor + " " + (vh) + "");
-        System.out.println("vehículos que mas pasó por el peaje: " + veh_menor + " " + (vh_m) + "");
+        System.out.println("vehículos que menos pasó por el peaje: " + veh_menor + " " + (vh_m) + "");
     }
 
 }

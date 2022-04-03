@@ -9,11 +9,12 @@ import javax.swing.JOptionPane;
 public class Ejercicio1 {
 
     int n = 3;
-    int[][] a = new int[n][n];
+    int a[][] = new int[n][n];
     int mitad = a[0].length / 2;
+    int mitad_f = a.length / 2;
 
     double suma = 0;
-    double sumai = 0, sumaC = 0;
+    double sumai = 0, sumaC = 0, sumaF = 0;
 
     public void Cargar_matriz() {
 
@@ -69,20 +70,17 @@ public class Ejercicio1 {
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
-                if ((i + i) > mitad && (j - j) < mitad) {
+                if (i == mitad_f || j == mitad) {
                     System.out.println(a[i][j]);
                     sumaC += a[i][j];
+
                 }
 
             }
-            if ((i + i) > mitad) {
-                System.out.println(a[i]);
 
-            }
-            break;
         }
 
-        // System.out.println("la suma diagonal matriz " + sumaC);
+        System.out.println("suma Columna " + sumaC + " suma Fila " + sumaF);
 
     }
 

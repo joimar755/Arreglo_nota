@@ -13,7 +13,8 @@ public class Menu {
             System.out.println("[1] Cargar_matriz");
             System.out.println("[2] Mostrar matriz");
             System.out.println("[3] Sumar_matriz");
-            System.out.println("[4] Salir");
+            System.out.println("[4] Sumar_Columnas");
+            System.out.println("[5] Salir");
             opcion = sc.nextInt();
 
             switch (opcion) {
@@ -27,12 +28,15 @@ public class Menu {
                     m.Sumar_matriz();
                     break;
                 case 4:
+                    m.Sumar_Columas();
+                    break;
+                case 5:
                     System.out.println("\n\n\t\tFin del programa");
                     break;
 
                 default:
                     break;
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
     }
 }

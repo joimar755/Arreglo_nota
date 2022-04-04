@@ -70,9 +70,13 @@ public class Ejercicio1 {
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
-                if (i == mitad_f || j == mitad) {
+                if (i == mitad_f) {
                     System.out.println(a[i][j]);
                     sumaC += a[i][j];
+                }
+                if (j == mitad) {
+                    System.out.println(a[i][j]);
+                    sumaF += a[i][j];
 
                 }
 
@@ -80,7 +84,7 @@ public class Ejercicio1 {
 
         }
 
-        System.out.println("suma Columna " + sumaC + " suma Fila " + sumaF);
+        System.out.println("suma fila: " + sumaC + " suma columna: " + sumaF);
 
     }
 

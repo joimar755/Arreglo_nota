@@ -42,6 +42,7 @@ public class Ejercicio1 {
         System.out.println("-----------------------------------------");
         System.out.println(Arrays.deepToString(a));
         System.out.println("-----------------------------------------");
+
         for (int i = 0; i < a.length; i++) {
             String resultado = "";
             for (int j = 0; j < a[0].length; j++) {

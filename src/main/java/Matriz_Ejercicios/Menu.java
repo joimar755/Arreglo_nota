@@ -7,7 +7,7 @@ public class Menu {
         Ejercicio1 m = new Ejercicio1();
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
-
+ 
         do {
             System.out.println("\n\n\t\tMenu matriz\n");
             System.out.println("[1] Cargar_matriz");

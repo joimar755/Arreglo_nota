@@ -93,15 +93,19 @@ public class Ejercicio1 {
                     System.out.println(a[i][j]);
                     sumaS += a[i][j];
                 }
+                // suma_cuadrante1
                 if ((i < mitad) && (j < mitad)) {
                     sumaCU1 += a[i][j];
                 }
+                // suma_cuadrante1
                 if ((i < mitad) && (j > mitad)) {
                     sumaCU2 += a[i][j];
                 }
+                // suma_cuadrante1
                 if ((i > mitad) && (j > mitad)) {
                     sumaCU3 += a[i][j];
                 }
+                // suma_cuadrante1
                 if ((i > mitad) && (j < mitad)) {
                     sumaCU4 += a[i][j];
                 }

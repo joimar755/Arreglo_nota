@@ -65,7 +65,7 @@ public class Ejercicio1 {
         System.out.println("suma de los impar " + sumai);
     }
 
-    public void Sumar_Columas() {
+    public void Sumar_Columas_Y_Filas() {
         System.out.println("---------------------------------------------");
         // diagonal (j - i) < mitad && (i - j) < mitad)
 

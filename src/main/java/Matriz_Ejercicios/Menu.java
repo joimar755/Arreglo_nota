@@ -28,7 +28,7 @@ public class Menu {
                     m.Sumar_matriz();
                     break;
                 case 4:
-                    m.Sumar_Columas();
+                    m.Sumar_Columas_Y_Filas();
                     break;
                 case 5:
                     System.out.println("\n\n\t\tFin del programa");

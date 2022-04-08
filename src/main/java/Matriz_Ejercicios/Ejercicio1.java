@@ -106,6 +106,7 @@ public class Ejercicio1 {
                 if ((i > mitad) && (j > mitad)) {
                     sumaCU3 += a[i][j];
                 }
+                // suma_cuadrante4
                 if ((i > mitad) && (j < mitad)) {
                     sumaCU4 += a[i][j];
                 }
@@ -134,7 +135,7 @@ public class Ejercicio1 {
 
         }
 
-        System.out.println("suma_fila: " + sumaC + " suma_columna: " + sumaF + " suma_diagonal: " + sumaD
+        System.out.println("suma_fila: " + sumaC + " suma_columna: " + sumaF + " suma_diagonal_principal: " + sumaD
                 + " suma_diagonal_secundaria: " + sumaS + " suma_cuadrante_1: " + sumaCU1 + " suma_cuadrante_2: "
                 + sumaCU2 + " suma_cuadrante_3: " + sumaCU3 + " suma_cuadrante_4: " + sumaCU4 + " suma_cuadrante_X4: "
                 + sumaX4 + " suma_cuadrante_X1: " + sumaX1 + " suma_cuadrante_X3: " + sumaX3 + " suma_cuadrante_X2: "

@@ -14,7 +14,8 @@ public class Ejercicio1 {
     int mitad_f = a.length / 2;
 
     double suma = 0;
-    double sumai = 0, sumaC = 0, sumaF = 0, sumaD = 0, sumaS = 0, sumaCU1 = 0, sumaCU2 = 0, sumaCU3 = 0, sumaCU4 = 0;
+    double sumai = 0, sumaC = 0, sumaF = 0, sumaD = 0, sumaS = 0, sumaCU1 = 0, sumaCU2 = 0, sumaCU3 = 0, sumaCU4 = 0,
+            sumaX1 = 0, sumaX2 = 0, sumaX3 = 0, sumaX4 = 0;
 
     public void Cargar_matriz() {
 
@@ -97,17 +98,36 @@ public class Ejercicio1 {
                 if ((i < mitad) && (j < mitad)) {
                     sumaCU1 += a[i][j];
                 }
-                // suma_cuadrante1
+                // suma_cuadrante2
                 if ((i < mitad) && (j > mitad)) {
                     sumaCU2 += a[i][j];
                 }
-                // suma_cuadrante1
+                // suma_cuadrante3
                 if ((i > mitad) && (j > mitad)) {
                     sumaCU3 += a[i][j];
                 }
-                // suma_cuadrante1
                 if ((i > mitad) && (j < mitad)) {
                     sumaCU4 += a[i][j];
+                }
+
+                // suma_cuadranteX4
+                if (i > j && (i + j < a.length - 1)) {
+                    sumaX4 += a[i][j];
+                }
+
+                // suma_cuadranteX1
+                if ((i < j) && (i + j < a.length - 1)) {
+                    sumaX1 += a[i][j];
+                }
+
+                // suma_cuadranteX3
+                if ((i > j) && (i + j > a.length - 1)) {
+                    sumaX3 += a[i][j];
+                }
+
+                // suma_cuadranteX2
+                if ((i < j) && (i + j > a.length - 1)) {
+                    sumaX2 += a[i][j];
                 }
 
             }
@@ -116,7 +136,9 @@ public class Ejercicio1 {
 
         System.out.println("suma_fila: " + sumaC + " suma_columna: " + sumaF + " suma_diagonal: " + sumaD
                 + " suma_diagonal_secundaria: " + sumaS + " suma_cuadrante_1: " + sumaCU1 + " suma_cuadrante_2: "
-                + sumaCU2 + " suma_cuadrante_3: " + sumaCU3 + " suma_cuadrante_4: " + sumaCU4);
+                + sumaCU2 + " suma_cuadrante_3: " + sumaCU3 + " suma_cuadrante_4: " + sumaCU4 + " suma_cuadrante_X4: "
+                + sumaX4 + " suma_cuadrante_X1: " + sumaX1 + " suma_cuadrante_X3: " + sumaX3 + " suma_cuadrante_X2: "
+                + sumaX2);
 
     }
 

@@ -6,6 +6,8 @@ public class Ejercicio2 {
     int sumaP = 0;
     int sumaS = 0;
     int suma_t = 0;
+    int suma_z = 0;
+    int mitad = a[0].length / 2;
 
     public void Cargar_matriz() {
         if (n % 2 != 0 && n % 2 != 0) {
@@ -36,19 +38,25 @@ public class Ejercicio2 {
                 if (i == j) {
                     // System.out.println("---------diagonal_principal----------");
 
-                    System.out.println(a[i][j]);
+                    // System.out.println(a[i][j]);
                     sumaP += a[i][j];
                 }
                 if ((i + j) == a.length - 1) {
                     // System.out.println("---------diagonal_secundaria----------");
-                    System.out.println(a[i][j]);
+                    // System.out.println(a[i][j]);
                     sumaS += a[i][j];
+                }
+                if (i + j <= 1) {
+                    // System.out.println("---------diagonal_tercera----------");
+                    System.out.println(a[i][j]);
+                    suma_z += a[i][j];
                 }
 
             }
         }
         suma_t = sumaP + sumaS;
         System.out.println("la suma diagonal en x: " + suma_t);
+        System.out.println("la suma diagonal en z: " + suma_z);
 
     }
 

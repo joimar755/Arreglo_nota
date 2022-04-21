@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MenuM",
+            "request": "launch",
+            "mainClass": "Parcial_matriz.MenuM",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Menu",
             "request": "launch",
             "mainClass": "Matriz_Ejercicios.Menu",

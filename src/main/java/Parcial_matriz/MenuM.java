@@ -1,10 +1,10 @@
-package Matriz_Ejercicios;
+package Parcial_matriz;
 
 import java.util.Scanner;
 
-public class Menu {
+public class MenuM {
     public static void main(String[] args) {
-        Ejercicio1 m = new Ejercicio1();
+        Ejercicio2 m = new Ejercicio2();
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
 
@@ -12,9 +12,8 @@ public class Menu {
             System.out.println("\n\n\t\tMenu matriz\n");
             System.out.println("[1] Cargar_matriz");
             System.out.println("[2] Mostrar matriz");
-            System.out.println("[3] Sumar_matriz");
-            System.out.println("[4] Sumar_Columnas");
-            System.out.println("[5] Salir");
+            System.out.println("[3] Sumar_datos");
+            System.out.println("[4] Salir");
             opcion = sc.nextInt();
 
             switch (opcion) {
@@ -25,18 +24,15 @@ public class Menu {
                     m.Mostrar_matriz();
                     break;
                 case 3:
-                    m.Sumar_matriz();
+                    m.Sumar_datos();
                     break;
                 case 4:
-                    m.Sumar_Columas_Y_Filas();
-                    break;
-                case 5:
                     System.out.println("\n\n\t\tFin del programa");
                     break;
 
                 default:
                     break;
             }
-        } while (opcion != 5);
+        } while (opcion != 4);
     }
 }

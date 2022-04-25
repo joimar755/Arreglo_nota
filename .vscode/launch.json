@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Prymatriz",
+            "request": "launch",
+            "mainClass": "Parcial_recuperacion.Prymatriz",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matriz_letra",
+            "request": "launch",
+            "mainClass": "Parcial_matriz.Matriz_letra",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matriz_letra",
+            "request": "launch",
+            "mainClass": "Parcial_recuperacion.Matriz_letra",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch MenuM",
             "request": "launch",
             "mainClass": "Parcial_matriz.MenuM",

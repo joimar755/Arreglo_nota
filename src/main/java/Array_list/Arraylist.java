@@ -8,6 +8,8 @@ public class Arraylist {
     public static void main(String[] args) {
         int opcion = 0;
         ArrayList<String> lista = new ArrayList<String>();
+        ArrayList<String> lista1 = new ArrayList<String>();
+        ArrayList<String> lista2 = new ArrayList<String>();
         do {
 
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -104,13 +106,37 @@ public class Arraylist {
                     break;
 
                 case 7:
+                    if (!lista.isEmpty()) {
+                        lista.clear();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Lista esta vacía");
+                    }
 
                     break;
 
                 case 8:
+                    int cont = 0;
+                    String datorep = JOptionPane.showInputDialog(null, "Digite dato a Buscar");
+                    for (String elemento : lista) {
+                        if (elemento.equals(datorep)) {
+                            cont = cont + 1;
+                        }
+
+                    }
+                    JOptionPane.showMessageDialog(null, "El Dato esta repetido " + cont);
                     break;
 
                 case 9:
+                    for (String elemento : lista) {
+                        if (elemento.length() == 3) {
+                            lista1.add(elemento);
+                        } else {
+                            lista2.add(elemento);
+                        }
+                    }
+
+                    System.out.println("Lista 1 con 3 letras " + lista1);
+                    System.out.println("Lista 2 con más 3 letras " + lista2);
 
                     break;
 

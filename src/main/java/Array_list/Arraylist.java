@@ -59,18 +59,47 @@ public class Arraylist {
                     break;
 
                 case 3:
+                    int x = Integer.parseInt(JOptionPane.showInputDialog(null, "digite pocision "));
+                    if (x <= lista.size()) {
+                        dato = JOptionPane.showInputDialog(null, "digite dato a agregar");
+                        lista.add(x, dato);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "x es mayor al tamaño de la lista");
+                    }
 
                     break;
 
                 case 4:
+                    x = Integer.parseInt(JOptionPane.showInputDialog(null, "digite pocision "));
+                    if (x <= lista.size()) {
+                        JOptionPane.showMessageDialog(null, "El dato de posicion " + x + " ES " + lista.get(x));
+                    } else {
+
+                        JOptionPane.showMessageDialog(null, "x es mayor al Tamaño");
+                    }
 
                     break;
 
                 case 5:
+                    String datobus = JOptionPane.showInputDialog(null, "Digite dato a Buscar");
+                    if (lista.contains(datobus)) {
+                        JOptionPane.showMessageDialog(null, "El dato encontrado en la posición"
+                                + lista.indexOf(datobus) + " ES " + lista.get(lista.indexOf(datobus)));
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Dato buscado no encontrado");
+                    }
 
                     break;
 
                 case 6:
+                    x = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite posición"));
+                    if (x <= lista.size()) {
+                        lista.remove(x);
+                        JOptionPane.showMessageDialog(null, "El dato de posición " + x + " FuE Removido");
+
+                    } else {
+                        JOptionPane.showMessageDialog(null, "x es mayor al Tamaño");
+                    }
 
                     break;
 

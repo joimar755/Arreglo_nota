@@ -51,7 +51,7 @@ public class Arraylist {
                              */
 
                             for (int i = 0; i < lista.size(); i++) {
-                                JOptionPane.showMessageDialog(null, null + "" + lista.get(i));
+                                JOptionPane.showMessageDialog(null, " " + i + " " + lista.get(i));
                             }
                         }
 

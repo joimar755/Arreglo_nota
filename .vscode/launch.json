@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Arraylist",
+            "request": "launch",
+            "mainClass": "Array_list.Arraylist",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Prymatriz",
             "request": "launch",
             "mainClass": "Parcial_recuperacion.Prymatriz",

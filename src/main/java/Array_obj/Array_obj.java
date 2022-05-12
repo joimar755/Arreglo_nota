@@ -6,11 +6,10 @@ import javax.swing.JOptionPane;
 
 public class Array_obj {
     public static void main(String[] args) {
-        Persona p = new Persona();
-        int opcion = 0; 
-       
+        // Persona p = new Persona();
+        int opcion = 0;
 
-        ArrayList<String> lista_persona = new ArrayList<String>();
+        ArrayList<Persona> lista_persona = new ArrayList<Persona>();
 
         do {
 
@@ -186,7 +185,7 @@ public class Array_obj {
                     break;
 
                 case 9:
-                    /*for (String elemento : lista_persona) {
+                    for (String elemento : lista_persona) {
                         if (elemento.length() == 3) {
                             lista1.add(elemento);
                         } else {
@@ -207,7 +206,6 @@ public class Array_obj {
                     JOptionPane.showMessageDialog(null, "Ingrese una opcion valida\n", "Error Opcion",
                             JOptionPane.WARNING_MESSAGE);
             }
-            */
 
         } while (opcion != 10);
     }

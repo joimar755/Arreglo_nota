@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Array_obj",
+            "request": "launch",
+            "mainClass": "Array_obj.Array_obj",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Arraylist",
             "request": "launch",
             "mainClass": "Array_list.Arraylist",

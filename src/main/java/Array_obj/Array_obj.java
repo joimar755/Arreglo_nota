@@ -127,7 +127,7 @@ public class Array_obj {
                     if (x <= lista_persona.size()) {
                         JOptionPane.showMessageDialog(null, "El dato de posición " + x + " ES " + lista_persona.get(x));
                         int campo = Integer.parseInt(
-                                JOptionPane.showInputDialog("Que Campo desea Actualizar 1. Nombre Genero 3 Edad "));
+                                JOptionPane.showInputDialog("Que Campo desea Actualizar 1. Nombre 2. Genero 3 Edad "));
                         switch (campo) {
                             case 1:
                                 nomx = JOptionPane.showInputDialog("Digite Nombre");

@@ -57,7 +57,7 @@ public class Array_obj {
                              */
 
                             for (int i = 0; i < lista_persona.size(); i++) {
-                                JOptionPane.showMessageDialog(null, " " + i + " " + lista.get(i));
+                                JOptionPane.showMessageDialog(null, " " + i + " " + lista_persona.get(i));
                             }
                         }
 
@@ -137,14 +137,14 @@ public class Array_obj {
                                 break;
 
                             case 2:
-                                nomx = lista_persona.get(x).getNom();
+                                nomx = lista_persona.get(x).getPersona();
                                 genx = JOptionPane.showInputDialog("Digite Genero").charAt(0);
-                                edx = listaPersona.get(x).getEdad();
+                                edx = lista_persona.get(x).getEdad();
                                 break;
 
                             case 3:
-                                nomx = listaPersona.get(x).getNom();
-                                genx = listaPersona.get(x).getGenero();
+                                nomx = lista_persona.get(x).getPersona();
+                                genx = lista_persona.get(x).getGenero();
                                 edx = Integer.parseInt(JOptionPane.showInputDialog("Digite Edad"));
 
                                 break;
@@ -154,7 +154,7 @@ public class Array_obj {
                         }
 
                         Persona regin = new Persona(nomx, genx, edx);
-                        listaPersona.add(x, regin);
+                        lista_persona.add(x, regin);
 
                     } else {
 
@@ -173,28 +173,10 @@ public class Array_obj {
                     break;
 
                 case 8:
-                    int cont = 0;
-                    String datorep = JOptionPane.showInputDialog(null, "Digite dato a Buscar");
-                    for (String elemento : lista_persona) {
-                        if (elemento.equals(datorep)) {
-                            cont = cont + 1;
-                        }
 
-                    }
-                    JOptionPane.showMessageDialog(null, "El Dato esta repetido " + cont);
                     break;
 
                 case 9:
-                    for (String elemento : lista_persona) {
-                        if (elemento.length() == 3) {
-                            lista1.add(elemento);
-                        } else {
-                            lista2.add(elemento);
-                        }
-                    }
-
-                    System.out.println("Lista 1 con 3 letras " + lista1);
-                    System.out.println("Lista 2 con más 3 letras " + lista2);
 
                     break;
 

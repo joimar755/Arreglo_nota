@@ -3,15 +3,13 @@ package Array_obj;
 public class Persona {
     private String persona;
     private char genero;
-    private int edad; 
+    private int edad;
 
     public Persona(String persona, char genero, int edad) {
         this.persona = persona;
         this.genero = genero;
         this.edad = edad;
     }
-    
-    
 
     /**
      * @return String return the persona
@@ -53,13 +51,11 @@ public class Persona {
      */
     public void setEdad(int edad) {
         this.edad = edad;
-    } 
+    }
 
     @Override
     public String toString() {
         return "Persona{" + "persona=" + persona + ", genero=" + genero + ", edad=" + edad + '}';
     }
-    
-    
 
 }

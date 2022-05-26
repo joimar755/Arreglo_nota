@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Array_estudiantes",
+            "request": "launch",
+            "mainClass": "Array_estudiantes.Array_estudiantes",
+            "projectName": "nota"
+        },
+        {
+            "type": "java",
             "name": "Launch Array_obj",
             "request": "launch",
             "mainClass": "Array_obj.Array_obj",

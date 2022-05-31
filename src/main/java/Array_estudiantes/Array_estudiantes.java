@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Array_estudiantes {
-    private static final String Estudiantes = null;
 
     public static void main(String[] args) {
         // Persona p = new Persona();
         int opcion = 0;
 
         ArrayList<Estudiantes> lista_Estudiantes = new ArrayList<Estudiantes>();
+        ArrayList<Estudiantes> lista_ganada = new ArrayList<Estudiantes>();
+        ArrayList<Estudiantes> lista_perdida = new ArrayList<Estudiantes>();
 
         do {
 
@@ -25,7 +26,9 @@ public class Array_estudiantes {
                             "7.Mostrar lo estudiantes con 3 letras\n" +
                             "8.Generar lista1 y lista2 con notas ganadas y perdidas\n" +
                             "9.Mostrar Notas por una asignatura x\n" +
-                            "10.Salir\n" +
+                            "10.promedio notas x\n" +
+                            "11.porcentanjes ganaron y perdieron x\n" +
+                            "12.Salir\n" +
                             "Ingresar La opcion [1 a 10]",
                     "Menú Arraylist", JOptionPane.QUESTION_MESSAGE));
 
@@ -39,6 +42,7 @@ public class Array_estudiantes {
                     float nota = Float.parseFloat(JOptionPane.showInputDialog("Digite nota"));
                     Estudiantes regi = new Estudiantes(codigo, nom, materia, nota);
                     lista_Estudiantes.add(regi);
+
                     // System.out.println(dato);
                     // int dato = Integer.parseInt(
                     // JOptionPane.showInputDialog(null, "digite opcion 1 para adicionar"));
@@ -81,23 +85,6 @@ public class Array_estudiantes {
 
                         JOptionPane.showMessageDialog(null, "x es mayor al Tamaño");
                     }
-                    /*
-                     * int x = Integer.parseInt(JOptionPane.showInputDialog(null,
-                     * "Digite posicion"));
-                     * if (x <= lista_Estudiantes.size()) {
-                     * codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite Codigo"));
-                     * nom = JOptionPane.showInputDialog("Digite Estudiante");
-                     * materia = JOptionPane.showInputDialog("Digite Materia");
-                     * nota = Float.parseFloat(JOptionPane.showInputDialog("Digite nota"));
-                     * Estudiantes regix = new Estudiantes(codigo, nom, materia, nota);
-                     * lista_Estudiantes.add(x, regix);
-                     * 
-                     * } else {
-                     * JOptionPane.showMessageDialog(null, "x es mayor al tamaño de la lista");
-                     * }
-                     * 
-                     * break;
-                     */
 
                 case 4:
                     int codigox;
@@ -127,25 +114,6 @@ public class Array_estudiantes {
                     }
 
                     break;
-                /*
-                 * if (lista_Estudiantes.isEmpty()) {
-                 * JOptionPane.showMessageDialog(null, "Lista Vacia");
-                 * } else {
-                 * int pos = 0;
-                 * String salida = "";
-                 * for (Estudiantes elemento : lista_Estudiantes) {
-                 * if (elemento.getMateria() == ) {
-                 * salida = salida + pos + " ";
-                 * salida = salida + elemento;
-                 * salida = salida + "\n";
-                 * pos = pos + 1;
-                 * }
-                 * } // fin for
-                 * JOptionPane.showMessageDialog(null, "Datos del Arraylist \n" + salida);
-                 * } // fin si
-                 * 
-                 * break;
-                 */
 
                 case 5:
                     x = Integer.parseInt(JOptionPane.showInputDialog(null, "digite pocision "));
@@ -157,26 +125,7 @@ public class Array_estudiantes {
 
                     }
                     break;
-                /*
-                 * if (lista_Estudiantes.isEmpty()) {
-                 * JOptionPane.showMessageDialog(null, "Lista Vacia");
-                 * } else {
-                 * int pos = 0;
-                 * String salida = "";
-                 * for (Estudiantes elemento : lista_Estudiantes) {
-                 * if (elemento.getNota() > 3.0) {
-                 * salida = salida + pos + " ";
-                 * salida = salida + elemento;
-                 * salida = salida + "\n";
-                 * pos = pos + 1;
-                 * }
-                 * 
-                 * } // fin for
-                 * JOptionPane.showMessageDialog(null, "Datos del Arraylist \n" + salida);
-                 * } // fin si
-                 * 
-                 * break;
-                 */
+
                 case 6:
                     if (!lista_Estudiantes.isEmpty()) {
                         lista_Estudiantes.clear();
@@ -198,19 +147,83 @@ public class Array_estudiantes {
                     break;
 
                 case 8:
+
                     for (Estudiantes estudiante : lista_Estudiantes) {
-                        if (estudiante.equals() {
-                            lista_Estudiantes.add(estudiante);
+                        if (estudiante.getNota() >= 3.0) {
+                            lista_ganada.add(estudiante);
+                        } else {
+                            lista_perdida.add(estudiante);
+                        }
+
+                    }
+                    System.out.println("ganadas" + lista_ganada);
+                    System.out.println("perdidas" + lista_perdida);
+
+                    break;
+                case 9:
+                    String x2 = JOptionPane.showInputDialog(null, "ingrese la notas asignaturas que quieres ver");
+                    for (int i = 0; i < lista_Estudiantes.size(); i++) {
+                        if (lista_Estudiantes.get(i).getMateria().equals(x2)) {
+                            JOptionPane.showMessageDialog(null, "nota es " + lista_Estudiantes.get(i).getNota());
+                        } else {
+                            JOptionPane.showMessageDialog(null, "error nota");
+
                         }
                     }
 
                     break;
 
-                case 9:
+                case 10:
+                    float suma = 0,n=0, prom = 0;
+
+                    int count = 0;
+                    String x3 = JOptionPane.showInputDialog(null, "ingrese la notas asignaturas que quieres ver");
+                    for (int i = 0; i < lista_Estudiantes.size(); i++) {
+                        n = lista_Estudiantes.get(i).getNota();
+                        String materiax3 = lista_Estudiantes.get(i).getMateria();
+                        if (materiax3.equals(x3)) {
+                           suma+=n;
+                           count += 1;
+
+                        }else{
+                            System.out.println("error");
+                        }
+                        //System.out.println(n);
+                        //JOptionPane.showMessageDialog(null,"acumulador g"+ n);
+                    }
+
+                    prom = suma/count;
+                    JOptionPane.showMessageDialog(null,"promedio  es"+ prom);
+                    break;
+
+                case 11:
+                    float sumag = 0,sumap = 0,n1=0;
+                    int count1 = 0;
+                    String x4 = JOptionPane.showInputDialog(null, "ingrese agignatura para mirar el procentaje: ");
+                    for (int j = 0; j < lista_Estudiantes.size(); j++) {
+                        n1 = lista_Estudiantes.get(j).getNota();
+                        String materiax4 = lista_Estudiantes.get(j).getMateria();
+                        if (materiax4.equals(x4)) {
+                            if (n1>=3.0){
+                                sumag += 1;
+                            }else{
+                                sumap += 1;
+                            }
+                            count1+=1;
+                        }
+                        //System.out.println(n);
+                        //JOptionPane.showMessageDialog(null,"acumulador g"+ n);
+                    }
+
+                    float porceg = (sumag*100)/count1;
+                    float porcep = (sumap*100)/count1;
+                    JOptionPane.showMessageDialog(null,"porcentaje ganado es"+ porceg);
+                    JOptionPane.showMessageDialog(null,"porcentaje perdido es"+ porcep);
+
 
                     break;
 
-                case 10:
+                case 12:
                     System.exit(0);
 
                     break;
@@ -219,6 +232,6 @@ public class Array_estudiantes {
                             JOptionPane.WARNING_MESSAGE);
             }
 
-        } while (opcion != 10);
+        } while (opcion != 12);
     }
 }

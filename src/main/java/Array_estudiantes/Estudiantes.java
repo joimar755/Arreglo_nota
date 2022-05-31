@@ -46,16 +46,18 @@ public class Estudiantes {
 
     public float setNota(float nota) {
         this.nota = nota;
+        return nota;
     }
+
+
 
     @Override
     public String toString() {
-        return "{" +
-                " codigo='" + getCodigo() + "'" +
-                ", nombre='" + getNombre() + "'" +
-                ", Materia='" + getMateria() + "'" +
-                ", nota='" + getNota() + "'" +
-                "}";
+        return "Estudiantes{" +
+                "codigo=" + codigo +
+                ", nombre='" + nombre + '\'' +
+                ", Materia='" + Materia + '\'' +
+                ", nota=" + nota +
+                '}';
     }
-
 }

@@ -1,7 +1,7 @@
 package Parcial_matriz;
 
 public class Ejercicio2 {
-    int n = 5;
+    int n = 3;
     int a[][] = new int[n][n];
     int sumaP = 0;
     int sumaS = 0;
@@ -96,7 +96,7 @@ public class Ejercicio2 {
                 }
                 if (j == mitad_f) {
                     // System.out.println("---------mitad_fila----------");
-                    // System.out.println(a[i][j]);
+                    System.out.println(a[i][j]);
                     suma_c += a[i][j];
                 }
 
@@ -104,7 +104,8 @@ public class Ejercicio2 {
 
         }
 
-        suma_t = sumaP + sumaS;
+        // suma_t = sumaP + sumaS;
+        suma_t = fila4 + suma_c - a[0][a.length / 2];
         suma_z = fila1 + fila2 - a[a.length - 1][0];
         int s = suma_z;
         int f = fila3 - a[a.length - 1][a.length - 1];
@@ -115,13 +116,13 @@ public class Ejercicio2 {
         suma_f = fila1 + f1 + suma_F;
         suma_e = fila1 + fila2 + fila4 + suma_F;
 
-        System.out.println("la suma diagonal en x: " + suma_t);
-        System.out.println("la suma diagonal en l: " + suma_z);
-        System.out.println("la suma diagonal en u: " + suma_u);
-        System.out.println("la suma diagonal en H: " + suma_h);
-        System.out.println("la suma diagonal en i: " + suma_i);
-        System.out.println("la suma diagonal en f: " + suma_f);
-        System.out.println("la suma diagonal en E: " + suma_e);
+        System.out.println("la suma  en t: " + suma_t);
+        System.out.println("la suma  en l: " + suma_z);
+        System.out.println("la suma  en u: " + suma_u);
+        System.out.println("la suma  en H: " + suma_h);
+        System.out.println("la suma  en i: " + suma_i);
+        System.out.println("la suma  en f: " + suma_f);
+        System.out.println("la suma  en E: " + suma_e);
 
     }
 

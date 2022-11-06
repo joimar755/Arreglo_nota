@@ -12,10 +12,10 @@ public class sin_titulo {
 	public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
 		int i;
-		double suma_a;
-		double suma_b;
-		double suma_c;
-		double suma_d;
+		double suma_a = 0;
+		double suma_b = 0;
+		double suma_c = 0;
+		double suma_d = 0;
 		double v1[];
 		double v2[];
 		v1 = new double[4];
